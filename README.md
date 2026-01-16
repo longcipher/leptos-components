@@ -1,10 +1,14 @@
 # Leptos Components
 
-A production-ready UI component library for [Leptos](https://leptos.dev) applications.
-
+[![DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/longcipher/leptos-components)
+[![Context7](https://img.shields.io/badge/Website-context7.com-blue)](https://context7.com/longcipher/leptos-components)
 [![Crates.io](https://img.shields.io/crates/v/longcipher-leptos-components.svg)](https://crates.io/crates/longcipher-leptos-components)
 [![Documentation](https://docs.rs/longcipher-leptos-components/badge.svg)](https://docs.rs/longcipher-leptos-components)
 [![License](https://img.shields.io/crates/l/longcipher-leptos-components.svg)](LICENSE)
+
+![leptos-components](https://socialify.git.ci/longcipher/leptos-components/image?font=Source+Code+Pro&language=1&name=1&owner=1&pattern=Circuit+Board&theme=Auto)
+
+A production-ready UI component library for [Leptos](https://leptos.dev) applications.
 
 ## Features
 

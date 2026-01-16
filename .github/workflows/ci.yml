@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+jobs:
+  check:
+    name: Lint and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rustfmt, clippy
+
+      - name: Setup Just
+        uses: extractions/setup-just@v2
+
+      - name: Install Tools
+        uses: taiki-e/install-action@v2
+        with:
+          tool: typos,taplo-cli,leptosfmt,cargo-machete
+
+      - name: Install rumdl
+        run: cargo install rumdl
+
+      - name: Run Lint
+        run: just lint
+
+      - name: Run Tests
+        run: just test
